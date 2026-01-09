@@ -6,14 +6,15 @@ const plans = [
     name: "Free",
     price: "$0",
     period: "forever",
-    description: "Try it out. No credit card required.",
+    whoFor: "Try it out",
     features: [
-      "3 document explanations per month",
+      "3 documents per month",
       "Up to 3,000 words per document",
       "Basic explanation format",
-      "No signup required"
+      "No signup required",
+      "No history saved"
     ],
-    cta: "Start for free",
+    cta: "Start free",
     variant: "outline" as const,
     highlighted: false
   },
@@ -21,13 +22,13 @@ const plans = [
     name: "Pro",
     price: "$12",
     period: "per month",
-    description: "For professionals who review documents regularly.",
+    whoFor: "For professionals who review documents regularly",
     features: [
-      "50 document explanations per month",
+      "50 documents per month",
       "Up to 25,000 words per document",
-      "Detailed explanation with red flags",
+      "Detailed red flags & questions",
       "PDF upload support",
-      "Explanation history (30 days)",
+      "30-day history",
       "Priority processing"
     ],
     cta: "Get Pro",
@@ -38,14 +39,14 @@ const plans = [
     name: "Unlimited",
     price: "$29",
     period: "per month",
-    description: "For power users and small teams.",
+    whoFor: "For power users and small teams",
     features: [
-      "Unlimited explanations",
+      "Unlimited documents",
       "Up to 50,000 words per document",
       "All Pro features",
       "Batch processing",
       "API access",
-      "Explanation history (1 year)",
+      "1-year history",
       "Email support"
     ],
     cta: "Get Unlimited",
@@ -56,11 +57,11 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section className="section-spacing bg-muted/30">
+    <section className="py-16 md:py-20 bg-muted/30">
       <div className="container-wide">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            Simple, transparent pricing
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
+            Simple pricing. Peace of mind.
           </h2>
           <p className="text-lg text-muted-foreground">
             Start free. Upgrade when you need more. Cancel anytime.
@@ -84,7 +85,7 @@ const Pricing = () => {
               )}
               
               <h3 className="text-xl font-semibold text-foreground">{plan.name}</h3>
-              <p className="text-muted-foreground text-sm mt-1 mb-4">{plan.description}</p>
+              <p className="text-muted-foreground text-sm mt-1 mb-4">{plan.whoFor}</p>
               
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-bold text-foreground">{plan.price}</span>
@@ -111,9 +112,18 @@ const Pricing = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* One-off pack */}
+        <div className="mt-10 max-w-xl mx-auto">
+          <div className="bg-card rounded-xl border border-border p-5 text-center">
+            <p className="text-foreground font-medium">
+              Need this once? <span className="text-cta">Get 3 documents for $9</span> — no subscription.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            All prices in USD. Billed monthly. Cancel anytime with one click.
+            All prices in USD. Cancel anytime with one click.
           </p>
         </div>
       </div>

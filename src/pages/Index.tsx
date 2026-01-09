@@ -1,16 +1,16 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
-import Problem from "@/components/landing/Problem";
-import Moment from "@/components/landing/Moment";
+import InstantDemo from "@/components/landing/InstantDemo";
 import HowItWorks from "@/components/landing/HowItWorks";
+import CommonClauses from "@/components/landing/CommonClauses";
 import WhatItDoesNot from "@/components/landing/WhatItDoesNot";
-import Demo from "@/components/landing/Demo";
+import Privacy from "@/components/landing/Privacy";
 import WhoItsFor from "@/components/landing/WhoItsFor";
 import Comparison from "@/components/landing/Comparison";
-import Privacy from "@/components/landing/Privacy";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
+import BuiltResponsibly from "@/components/landing/BuiltResponsibly";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
@@ -19,14 +19,13 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Problem />
-        <Moment />
+        <InstantDemo />
         <HowItWorks />
+        <CommonClauses />
         <WhatItDoesNot />
-        <Demo />
+        <Privacy />
         <WhoItsFor />
         <Comparison />
-        <Privacy />
         <section id="pricing">
           <Pricing />
         </section>
@@ -34,6 +33,7 @@ const Index = () => {
           <FAQ />
         </section>
         <FinalCTA />
+        <BuiltResponsibly />
       </main>
       <Footer />
     </div>
