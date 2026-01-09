@@ -2,7 +2,7 @@ import { FileText } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border py-12">
+    <footer className="border-t border-border py-10">
       <div className="container-wide">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
@@ -15,20 +15,23 @@ const Footer = () => {
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              About
+            </a>
+            <a href="mailto:support@explainthis.ai" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
           </nav>
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © 2026 ExplainThis AI. All rights reserved.
+            © 2026 ExplainThis AI
           </p>
         </div>
 
@@ -36,8 +39,7 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
             ExplainThis AI provides document explanations for informational purposes only. 
             It does not provide legal advice and should not be used as a substitute for 
-            consulting with a qualified attorney. Use of this service does not create an 
-            attorney-client relationship.
+            consulting with a qualified attorney.
           </p>
         </div>
       </div>
