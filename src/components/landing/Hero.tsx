@@ -1,17 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText, Shield, ArrowRight, Lightbulb, Globe } from "lucide-react";
 
 const Hero = () => {
   const [documentText, setDocumentText] = useState("");
+  const navigate = useNavigate();
 
   const handleExplain = () => {
-    if (documentText.trim()) {
-      const demoSection = document.getElementById("demo");
-      if (demoSection) {
-        demoSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
+    // Navigate to /try page
+    navigate("/try");
   };
 
   return (

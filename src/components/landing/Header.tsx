@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 
@@ -32,9 +33,11 @@ const Header = () => {
             <a href="#" className="hidden sm:inline-flex text-sm text-foreground hover:text-muted-foreground transition-colors">
               Log in
             </a>
-            <Button className="bg-cta hover:bg-cta/90 text-cta-foreground rounded-full px-5">
-              Try free
-            </Button>
+            <Link to="/try">
+              <Button className="bg-cta hover:bg-cta/90 text-cta-foreground rounded-full px-5">
+                Try free
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

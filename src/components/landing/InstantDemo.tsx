@@ -1,11 +1,8 @@
+import { Link } from "react-router-dom";
 import { AlertTriangle, CheckCircle2, HelpCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const InstantDemo = () => {
-  const scrollToHero = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <section className="py-12 md:py-16 bg-muted/30">
       <div className="container-wide">
@@ -77,15 +74,16 @@ const InstantDemo = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button 
-              variant="cta" 
-              size="lg" 
-              onClick={scrollToHero}
-              className="group"
-            >
-              Try this exact example
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/try">
+              <Button 
+                variant="cta" 
+                size="lg" 
+                className="group"
+              >
+                Try this exact example
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
